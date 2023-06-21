@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Train</title>
+    <link rel="stylesheet" href="./css/style2.css">
+    <style>
+        a.active {
+            background-color: antiquewhite;
+        }
+    </style>
+
+</head>
+<script src="./js/scrip.js"></script>
+
+<body>
+    <div align="center">
+
+        <h1 id="h2"> TRAIN RESERVATION SYSTEM ADMIN PANEL </h1>
+    </div>
+    <div align="right">
+        <input id="btn" type="submit" value="Clear" onclick="location.href='admin.html'">
+    </div>
+    <div class="train">
+        <a class="active" href="addtrain.html"><b>ADD TRAINS</b></a>
+        <a href="delete.html"><b>DELETE TRAIN</b></a>
+        <a href="showtrains.html"><b>SHOW TRAINS</b></a>
+        <a href="deleteusers.html"><b>DELETE USER</b></a>
+        <a href="showusers.html"><b>SHOW USERS</b></a>
+
+    </div>
+
+    <div align="center">
+        <div class="form">
+            <table border="0px">
+                <tr>
+                    <td align="center">Train Number:</td>
+                    <td><input type="text" id="tr_no" required></td>
+                </tr>
+                <tr>
+                    <td>Train Name</td>
+                    <td><input type="text" id="tr_na" required></td>
+                </tr>
+                <tr>
+                    <td>Source</td>
+                    <td><input type="text" id="tr_so" required></td>
+                </tr>
+                <tr>
+                    <td>Destination</td>
+                    <td><input type="text" id="tr_de" required></td>
+                </tr>
+                <tr>
+                    <td>Fare</td>
+                    <td><input type="text" id="tr_fa" required></td>
+                </tr>
+            </table>
+        </center>
+        <br><br>
+        <input id="ad_otp" type="text" placeholder="ENTER OTP" style="height: 20px;" />
+        <br><br>
+            <span>
+                <input id="btn" type="submit" value="Add train" onclick="add_train()">
+            </span>
+        </div>
+    </div>
+
+
+</body>
+
+
+
+</html>
