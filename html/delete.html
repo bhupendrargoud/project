@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Train</title>
+    <link rel="stylesheet" href="./css/style2.css">
+    <style>
+        a.active {
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<script src="./js/scrip.js"></script>
+
+<body>
+    <div align="center">
+        <h1 id="h2"> TRAIN RESERVATION SYSTEM ADMIN PANEL </h1>
+    </div>
+    <div align="right">
+        <input id="btn" type="submit" value="Clear" onclick="location.href='admin.html'">
+    </div>
+    <div class="train">
+
+        <a href="addtrain.html"><b>ADD TRAINS</b></a>
+        <a class="active" href="delete.html"><b>DELETE TRAIN</b></a>
+        <a href="showtrains.html"><b>SHOW TRAINS</b></a>
+        <a href="deleteusers.html"><b>DELETE USER</b></a>
+        <a href="showusers.html"><b>SHOW USERS</b></a>
+
+    </div>
+    <div align="center">
+
+        <div class="form" style="position: relative">
+            <center><input id="tr_dlt" type="text" placeholder="Train Number" style="height: 20px;" />
+                <br><br>
+              
+            </center>
+            <br><br>
+            <input id="ad_otp" type="text" placeholder="ENTER OTP" style="height: 20px;" />
+            <br><br>
+            <input id="btn" type="submit" value="Delete train" onclick=" delete_train()">
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./css/style1.css">
+  <title>Admin Login Form</title>
+
+</head>
+
+<script src="js/scrip.js">
+             
+</script>
+
+<body>
+ <div align="center">
+ <div class="form">
+   <img src="./image/avatar.png" >
+  <input type="text" placeholder="Admin id" id="uid" class="box">
+        <br><br>
+        <input type="password" placeholder="Password" id="pswd" class="box">
+        <br><br>
+        <div>
+         Captcha : <span class="login-btn" id="capd" align="center"></span>
+         
+        </div><br>
+        <input type="text" id="ad_cp" class="box" placeholder="Enter the Captcha" required>
+        <br>
+        
+        <br>
+      
+       
+        <br><br>
+    <input type="submit" onclick="temp()" class="login-btn" value="Login">
+</div>
+</div>
+</body>
+<script>
+  
+
+  var cap=gRN();
+  document.getElementById("capd").innerHTML=cap;
+
+
+  function temp(){
+
+    
+    var ca=document.getElementById("ad_cp").value;
+    console.log("otp call")
+   
+    console.log(ca)
+    if (cap==ca){
+      console.log("capcha v")
+      sign_inA();
+    }
+    else{
+      alert("Enter valid OTP or Captcha")
+    }
+  }
+</script>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Booking</title>
+    <link rel="stylesheet" href="./css/book_ticket.css">
+</head>
+
+
+<script src="./js/scrip.js"></script>
+
+<body align="center">
+
+    <div class="heading" align="center">
+        <h1>TRAIN TICKET BOOKING</h1>
+    </div>
+
+    <div align="left">
+        <input id="btn" type="submit" value="BACK" onclick="location.href='train_disp.html'" />
+    </div>
+    <div align="right">
+        <input id="btn" type="submit" value="LOGOUT" onclick="location.href='login2.html'" />
+    </div>
+
+
+
+
+    <br><br><br>
+    <div align="center" class="form">
+        <table border="2px">
+            <tr>
+                <td align="center">Source :</td>
+                <td><input type="text" id="bt_sr" placeholder="Enter Source" required></td>
+            </tr>
+
+            <tr>
+                <td>Destination :</td>
+                <td><input type="text" id="bt_de" placeholder="Enter Destination"required></td>
+            </tr>
+        </table>
+        <input id="btn" class="id" type="submit" value="Search" onclick="trainsd()" />
+    </div>
+
+    <br><br>
+    <div class="form" align="right">
+        <div id="trdatasd"></div>
+    </div>
+    <br><br>
+
+    <br><br><br>
+    <div align="center" class="form">
+        <table border="0px">
+            <tr>
+                <td align="center">Train Number:</td>
+                <td><input type="number" id="tr_no" placeholder="enter train number"></td>
+            </tr>
+
+            <tr>
+                <td>Date</td>
+                <td><input type="date" id="da_te" min="2022-01-27"></td>
+            </tr>
+            <tr>
+                <td>Choose CLASS</td>
+                <td><select name="Class" id="bt_cl">
+                    <option value="SL">Sleeper Class(SL)</option>
+                    <option value="FC">First Class (FC)</option>
+                    <option value="CC">AC Chair Class (CC)</option>
+                    <option value="2S">Second Class(2S)</option>
+                </select></td>
+            </tr>
+        </table>
+        <input id="btn" class="id" type="submit" value="contuinue" onclick="get_train()" />
+    </div>
+
+
+    <br> <br> <br>
+    <div class="form" align="right">
+        <div id="trdata"></div>
+    </div>
+
+   
+    <br><br>
+
+    <div align="center" class="form2">
+        <table border="0px">
+            <tr>
+                <td align="center">Number of Passenger</td>
+                <td><input type="number" id="pa_no" value="1"></td>
+            </tr>
+        </table>
+        <table border="0px">
+            <tr>
+                <td><input type="text" id="pa_na" placeholder="Name" /></td>
+                <td><input type="text" id="pa_ag" placeholder="Age" /></td>
+                <td><input type="text" id="pa_gn" placeholder="Gender" /></td>
+                <td><input type="submit" onclick="add_pa()" value="Add" /></td>
+            </tr>
+
+        </table>
+    </div>
+
+    <br> <br> <br>
+
+    <div class="form">
+        <div id="padata">
+        </div>
+     <!--   <input id="btn" type="submit" value="Book Ticket" onclick="book_ticket()" />-->
+    </div>
+
+    <br> <br> <br>
+     <div align="center">
+                            <div class="ts" >
+                                <h2>Total Fare </h2>
+                                    <div id="tf"></div>
+                                    <br>
+                                    <input id="btn" type="submit" value="Make Payment" onclick="temp()"/>
+                                </div>
+                            </div> 
+                                   
+
+
+
+</body>
+<script>
+  function temp() {
+      if(tt_fa!=0)
+      {
+
+
+        var text="PNR\t\t\t:"+PNR+"\n"+d_tt;
+        localStorage.setItem('PNR',PNR);
+        localStorage.setItem('tcsh',ticket);
+        localStorage.setItem('tcdw',text);
+          var url="payment.html"
+          window.location.replace(url);
+      }
+  }  
+</script>
+
+</html>
