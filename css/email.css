@@ -1,0 +1,33 @@
+
+#btn{
+    background:cadetblue(65, 12, 38);
+    font-family: sans-serif;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    background-color:cadetblue(243, 210, 22);
+    border-radius:10px;
+    margin: 2px;
+    padding: 10px;
+    border: green solid 2px;
+    text-decoration: none;
+    
+}
+
+
+#btn:hover{
+    transform: scale(1.10);
+}
+
+
+.form{
+    background-color:lightgrey;
+   width: 90%;
+   top: 50px;
+   border-radius: 10px;
+   padding: 25px;
+   position:relative;
+   border: solid 2px black;
+   }
+
+
