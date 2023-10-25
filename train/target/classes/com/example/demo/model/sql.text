@@ -1,0 +1,5 @@
+CREATE TABLE train (trainNo INT PRIMARY KEY,trainName VARCHAR(255),source VARCHAR(255),
+  destination VARCHAR(255),Fare DOUBLE);
+
+
+INSERT INTO train (trainNo, trainName, source, destination, Fare) VALUES (1234, 'Express', 'Delhi', 'Banglore', 100.0);
